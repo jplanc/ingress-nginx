@@ -119,6 +119,7 @@ rules:
       - ""
     resources:
       - configmaps
+      - endpoints
       - pods
       - secrets
       - namespaces
@@ -143,13 +144,6 @@ rules:
       - configmaps
     verbs:
       - create
-  - apiGroups:
-      - ""
-    resources:
-      - endpoints
-    verbs:
-      - get
-
 ---
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
